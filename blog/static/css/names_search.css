@@ -1,0 +1,50 @@
+body {
+  font: 10px sans-serif;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.x.axis path {
+
+}
+
+.line {
+  fill: none;
+  stroke: steelblue;
+  stroke-width: 1.5px;
+}
+
+h1 {
+font-size : 42px;
+position : relative;
+margin-left : 5px;
+}
+
+p {
+position : relative;
+margin-top : -15px;
+margin-left : 35px;
+font-size : 12px;
+}
+
+form {
+position : absolute;
+margin-left : 520px;
+margin-top : -70px;
+}
+
+input {
+position : absolute;
+margin-left : 173px;
+margin-top : 5px;
+}
+
+.legend {
+position : absolute;
+margin-left : 500px;
+}
