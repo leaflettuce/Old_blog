@@ -1,7 +1,7 @@
 {% extends 'blog/base.html' %}
 
 {% block content %}
-{% load staticfiles %}
+{% load static from staticfiles %}
 
 <!DOCTYPE html>
 <meta charset="utf-8">
@@ -20,11 +20,11 @@
 Count == (Number of people born with that name per year.)</p>
 <body>
 <script src="//d3js.org/d3.v3.min.js"></script>
-<script>
+<script type="text/javascript">
 
 /////////////Variable intializing
 
-var names_import = {% static 'data/names.csv' %}
+
 var margin = {top: 20, right: 20, bottom: 30, left: 50},
     width = 850 - margin.left - margin.right,
     height = 400 - margin.top - margin.bottom;
@@ -72,7 +72,7 @@ function clearContents(element) {
 };
 	
 	////////////////////import data
-d3.csv(names_import, type, function(error, data) {
+d3.csv("{% static 'data/names.csv' %}", type, function(error, data) {
   if (error) throw error;
   
   //filter only in names list
@@ -202,9 +202,9 @@ var svg = d3.select('g');
 d3.select('svg').selectAll('.line').remove();
 
 		////////////////////import data
-d3.csv(names_import, type, function(error, data) {
+d3.csv("{% static 'data/names.csv' %}", type, function(error, data) {
 
-
+  
   if (error) throw error;
   
   //filter only in names list

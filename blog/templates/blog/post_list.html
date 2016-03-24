@@ -10,6 +10,6 @@
         <p>{{ post.text|linebreaks }}</p>
     </div>
 {% endfor %}
-<h1> DATA </h1>
-<h3><a href="{% url 'names_search' %}">US Name Popularity</a></h3>
+<h1><a href="{% url 'names_search' %}">US Name Popularity</a></h1>
+<p>Line graph generator for manually entered names.  Tracks number of births with selected name(s) over the past 100 years in the US.</p>
 {% endblock %}
