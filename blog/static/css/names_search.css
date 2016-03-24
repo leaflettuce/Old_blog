@@ -27,7 +27,7 @@ margin-top : -5px;
 
 form {
 position : absolute;
-margin-left : 260px;
+margin-left : 240px;
 margin-top : 120px;
 }
 
@@ -44,14 +44,14 @@ margin-left : 500px;
 
 .button {
 position : absolute;
-margin-left : 90px;
+margin-left : 125px;
 margin-top : 5px;
 width: 5em;  
 height: 2.5em;
 }
 svg {
 position : absolute ;
-margin-top : 280px;
+margin-top : 340px;
 margin-left : 10px;
 }
 .title {
