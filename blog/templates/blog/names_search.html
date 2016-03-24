@@ -24,8 +24,8 @@
 /////////////Variable intializing
 
 
-var margin = {top: 20, right: 20, bottom: 30, left: 50},
-    width = 850 - margin.left - margin.right,
+var margin = {top: 20, right: 150, bottom: 30, left: 70},
+    width = 900 - margin.left - margin.right,
     height = 400 - margin.top - margin.bottom;
 
 var names_list = []
@@ -122,7 +122,7 @@ d3.csv("{% static 'data/names.csv' %}", type, function(error, data) {
       .call(xAxis)
 	  .append('text')
 	  .attr("y", -12)
-	  .attr("x", 780)
+	  .attr("x", 630)
       .attr("dy", ".71em")
 	  .style("text-anchor", "end")
 	  .text('year');
