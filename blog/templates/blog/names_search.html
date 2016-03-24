@@ -100,7 +100,6 @@ d3.csv("{% static 'data/names.csv' %}", type, function(error, data) {
 	
     // Loop through each and nest
     dataNest.forEach(function(d) {
-	console.log(d.values)
 
         var path = svg.append("path")
             .attr("class", "line")
@@ -194,7 +193,6 @@ new_names_list.forEach(function(entry) {
 	new_names_list2.push(in_name)
 });
 
-console.log(new_names_list2);
 
 var svg = d3.select('g');
 
@@ -233,7 +231,6 @@ d3.csv("{% static 'data/names.csv' %}", type, function(error, data) {
 	
     // Loop through each and nest
     dataNest.forEach(function(d) {
-	console.log(d.values)
 
          var path = svg.append("path")
             .attr("class", "line")
@@ -366,7 +363,6 @@ mouseG.append('svg:rect')
     // position the circle and text
     d3.selectAll(".mouse-per-line")
       .attr("transform", function(d, i) {
-        console.log(width/mouse[0])
         var xDate = x.invert(mouse[0]),
             bisect = d3.bisector(function(d) { return d.year; }).right;
             idx = bisect(d.values, xDate);
