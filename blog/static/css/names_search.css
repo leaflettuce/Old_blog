@@ -1,6 +1,4 @@
-body {
-  font: 10px sans-serif;
-}
+
 
 .axis path,
 .axis line {
@@ -26,12 +24,6 @@ margin-left : 0px;
 margin-top : -5px;
 }
 
-p {
-position : relative;
-margin-top : -5px;
-margin-left : 0px;
-
-}
 
 form {
 position : absolute;
