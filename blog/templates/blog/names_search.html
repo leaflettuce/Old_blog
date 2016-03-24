@@ -9,15 +9,14 @@
 <link rel="stylesheet" href="{% static 'css/names_search.css' %}">
 </head>
 <title>leaflettuce : Names Popularity</title>
-<h1>Name Popularity in U.S. </h1> 
+<h1><div class='title'>Name Popularity in U.S. </div></h1> 
 
 <form>
-<textarea id='input_names' rows="3" cols="30" onfocus="clearContents(this);">Please enter up to twenty first names, separated by (',')comma's...</textarea>
-<input type='button' value ='Submit' onclick="return update_data(document.getElementById('input_names').value)">
+<textarea id='input_names' rows="5" cols="42" onfocus="clearContents(this);">Please enter up to twenty first names, separated by (',') comma's...</textarea>
+<input type='button' class = 'button' value ='Submit' onclick="return update_data(document.getElementById('input_names').value)">
 </form>
 
-<p>Returns a view of name popularity in the US over the past 100 years.<br>
-Count == (Number of people born with that name per year.)</p>
+<div class='text'><p>Another interersting way to look at the baby names dataset.  Enter a name into the text box below to view a graph of the popularity of given names in the United States.  Data covers 1910 to 2014 and was obtained from <a href='http://kaggle.com'>Kaggle.com</a>. Try entering multiple names to compare up to twenty separate names at a time. You'll have to eparate the names in the textbox via comma's.</p></div>
 <body>
 <script src="//d3js.org/d3.v3.min.js"></script>
 <script type="text/javascript">

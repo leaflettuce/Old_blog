@@ -10,6 +10,10 @@
         <p>{{ post.text|linebreaks }}</p>
     </div>
 {% endfor %}
+
+
+ <div class="date">March 24, 2016</div>
 <h1><a href="{% url 'names_search' %}">US Name Popularity</a></h1>
-<p>Line graph generator for manually entered names.  Tracks number of births with selected name(s) over the past 100 years in the US.</p>
+<p>Another interersting way to look at the baby names dataset.  Enter a name into the text box below to view a graph of the popularity of given names in the United States.  Data covers 1910 to 2014...</p>
 {% endblock %}
+
