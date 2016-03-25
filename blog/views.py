@@ -42,3 +42,6 @@ def post_edit(request, pk):
 	
 def names_search(request):
     return render(request, 'blog/names_search.html')
+	
+def us_births(request):
+	return render(request, 'blog/us_names.html')

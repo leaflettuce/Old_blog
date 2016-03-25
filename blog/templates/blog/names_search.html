@@ -25,7 +25,7 @@
 
 
 var margin = {top: 20, right: 150, bottom: 30, left: 70},
-    width = 900 - margin.left - margin.right,
+    width = 1020 - margin.left - margin.right,
     height = 400 - margin.top - margin.bottom;
 
 var names_list = []
@@ -122,7 +122,7 @@ d3.csv("{% static 'data/names.csv' %}", type, function(error, data) {
       .call(xAxis)
 	  .append('text')
 	  .attr("y", -12)
-	  .attr("x", 630)
+	  .attr("x", 800)
       .attr("dy", ".71em")
 	  .style("text-anchor", "end")
 	  .text('year');
@@ -168,6 +168,7 @@ d3.csv("{% static 'data/names.csv' %}", type, function(error, data) {
 function type(d) {
   d.year = +d.year;
   d.count = +d.count;
+  d.name = d.name;
   return d;
 };
 
@@ -305,7 +306,7 @@ mouseG.append("path")
 // keep a reference to all our lines
 var lines = document.getElementsByClassName('line');
 
-// here's a g for each circle and text on the line
+// g for each circle and text on the line
 var mousePerLine = mouseG.selectAll('.mouse-per-line')
   .data(dataNest)
   .enter()
@@ -315,9 +316,7 @@ var mousePerLine = mouseG.selectAll('.mouse-per-line')
 // the circle
 mousePerLine.append("circle")
   .attr("r", 7)
-  .style("stroke", function(d) {
-    return color(d.key);
-  })
+  .style("stroke", 'black')
   .style("fill", "none")
   .style("stroke-width", "1px")
   .style("opacity", "0");
@@ -387,7 +386,7 @@ mouseG.append('svg:rect')
 
         // update the text with y value
         d3.select(this).select('text')
-          .text('(' + d.key + ') ' + Math.round(y.invert(pos.y).toFixed(2)));
+          .text(Math.round(y.invert(pos.y).toFixed(2)));  //d.key for name?
 
         // return position
         return "translate(" + mouse[0] + "," + pos.y +")";
