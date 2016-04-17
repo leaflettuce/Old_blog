@@ -8,4 +8,5 @@ urlpatterns = [
 	url(r'^post/(?P<pk>\d+)/edit/$', views.post_edit, name='post_edit'),
 	url(r'^names_search$', views.names_search, name='names_search'),
 	url(r'^us_births$', views.us_births, name='us_births'),
-	url(r'^tdwp_shows$', views.tdwp_shows, name='tdwp_shows'),]
+	url(r'^tdwp_shows$', views.tdwp_shows, name='tdwp_shows'),
+	url(r'^goodreads_exploration$', views.goodreads_exploration, name='goodreads_exploration'),]

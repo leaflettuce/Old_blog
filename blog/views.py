@@ -48,3 +48,6 @@ def us_births(request):
 	
 def tdwp_shows(request):
     return render(request, 'blog/tdwp_shows.html')
+		
+def goodreads_exploration(request):
+    return render(request, 'blog/goodreads_exploration.html')
