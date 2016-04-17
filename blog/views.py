@@ -45,3 +45,6 @@ def names_search(request):
 	
 def us_births(request):
 	return render(request, 'blog/us_names.html')
+	
+def tdwp_shows(request):
+    return render(request, 'blog/tdwp_shows.html')
